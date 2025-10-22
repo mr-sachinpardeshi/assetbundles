@@ -1,0 +1,15 @@
+resources:
+  pipelines:
+    pipeline_demopipeline2:
+      name: demopipeline2
+      libraries:
+        - glob:
+            include: ../../src/pipelines/demopipeline2/transformations/**
+      schema: bronze
+      continuous: false
+      development: false
+      photon: true
+      channel: CURRENT
+      catalog: assetbundles
+      serverless: true
+      root_path: ../../src/pipelines/demopipeline2
